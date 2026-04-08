@@ -37,8 +37,12 @@ def calcular_protocolo_completo(peso, altura, edad, actividad, objetivo):
         "objetivo": objetivo.upper()
     }
 
+from flask import Flask, render_template # Asegurate de tener render_template
+
+app = Flask(__name__)
+
 @app.route('/')
-def index():
+def home():
     return render_template('calculadora.html')
 
 @app.route('/crear_preferencia', methods=['POST'])
