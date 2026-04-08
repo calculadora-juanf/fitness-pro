@@ -1,3 +1,4 @@
 flask
 mercadopago
 flask-cors
+gunicorn
